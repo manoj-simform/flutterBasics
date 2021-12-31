@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -43,6 +45,46 @@ class _RowExampleState extends State<RowExample> {
     );
   }
 
+  DropdownButton androidMainDropdown() {
+    List<DropdownMenuItem> dropdownItems = [];
+    for (int i = 0; i < mainAxisList.keys.length; i++) {
+      var newItem = DropdownMenuItem(
+        child: mainAxisList.keys.elementAt(i),
+        value: mainAxisList.values.elementAt(i),
+      );
+      dropdownItems.add(newItem);
+    }
+    return DropdownButton(
+      value: mainAxisSelected,
+      onChanged: (value) {
+        setState(() {
+          mainAxisSelected = value;
+        });
+      },
+      items: dropdownItems,
+    );
+  }
+
+  DropdownButton androidCrossDropdown() {
+    List<DropdownMenuItem> dropdownItems = [];
+    for (int i = 0; i < crossAxisList.keys.length; i++) {
+      var newItem = DropdownMenuItem(
+        child: crossAxisList.keys.elementAt(i),
+        value: crossAxisList.values.elementAt(i),
+      );
+      dropdownItems.add(newItem);
+    }
+    return DropdownButton(
+      value: crossAxisSelected,
+      onChanged: (value) {
+        setState(() {
+          crossAxisSelected = value;
+        });
+      },
+      items: dropdownItems,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,7 +92,7 @@ class _RowExampleState extends State<RowExample> {
         title: const Text('Row Example'),
       ),
       body: Column(
-        mainAxisSize: MainAxisSize.max,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Expanded(
             child: Row(
@@ -76,7 +118,7 @@ class _RowExampleState extends State<RowExample> {
             ),
           ),
           Container(
-            padding: const EdgeInsets.symmetric(vertical: 15.0),
+            padding: const EdgeInsets.only(top: 15.0),
             color: Colors.lightBlue,
             child: Column(
               children: [
@@ -89,12 +131,12 @@ class _RowExampleState extends State<RowExample> {
                 const SizedBox(
                   height: 5.0,
                 ),
-                mainIOSPicker(),
+                Platform.isIOS ? mainIOSPicker() : androidMainDropdown(),
               ],
             ),
           ),
           Container(
-            padding: const EdgeInsets.only(top: 15.0, bottom: 30.0),
+            padding: const EdgeInsets.symmetric(vertical: 20.0),
             color: Colors.lightBlue,
             child: Column(
               children: [
@@ -107,7 +149,7 @@ class _RowExampleState extends State<RowExample> {
                 const SizedBox(
                   height: 5.0,
                 ),
-                crossIOSPicker(),
+                Platform.isIOS ? crossIOSPicker() : androidCrossDropdown(),
               ],
             ),
           ),
