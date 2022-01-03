@@ -1,6 +1,13 @@
 import 'package:flutter/cupertino.dart';
 
-var myDataList = ['column', 'row', 'textField', 'button', 'image'];
+var myDataList = [
+  'column',
+  'row',
+  'textField',
+  'button',
+  'image',
+  'stack'
+];
 
 var mainAxisList = <Text, MainAxisAlignment>{
   const Text('center'): MainAxisAlignment.center,
@@ -16,4 +23,16 @@ var crossAxisList = <Text, CrossAxisAlignment>{
   const Text('end'): CrossAxisAlignment.end,
   const Text('start'): CrossAxisAlignment.start,
   const Text('stretch'): CrossAxisAlignment.stretch,
+};
+
+var alignmentList = <Text, Alignment>{
+  const Text('Top Left'): Alignment.topLeft,
+  const Text('Top Center'): Alignment.topCenter,
+  const Text('Top Right'): Alignment.topRight,
+  const Text('Center Left'): Alignment.centerLeft,
+  const Text('Center'): Alignment.center,
+  const Text('Center Right'): Alignment.centerRight,
+  const Text('Bottom Left'): Alignment.bottomLeft,
+  const Text('Bottom Center'): Alignment.bottomCenter,
+  const Text('Bottom Right'): Alignment.bottomRight,
 };

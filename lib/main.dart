@@ -2,6 +2,7 @@ import 'package:basic_widget/button_example.dart';
 import 'package:basic_widget/data.dart';
 import 'package:basic_widget/image_example.dart';
 import 'package:basic_widget/row_example.dart';
+import 'package:basic_widget/stack_example.dart';
 import 'package:basic_widget/textfield_example.dart';
 import 'package:flutter/material.dart';
 
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
         '/textField': (context) => const TextFieldExample(),
         '/button': (context) => const ButtonExample(),
         '/image': (context) => const ImageExample(),
+        '/stack': (context) => const StackExample(),
       },
     );
   }
