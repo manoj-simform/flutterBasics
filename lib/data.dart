@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
-var myDataList = ['column', 'row', 'textField'];
+var myDataList = ['column', 'row', 'textField', 'button'];
 
 var mainAxisList = <Text, MainAxisAlignment>{
   const Text('center'): MainAxisAlignment.center,

@@ -1,3 +1,4 @@
+import 'package:basic_widget/button_example.dart';
 import 'package:basic_widget/data.dart';
 import 'package:basic_widget/row_example.dart';
 import 'package:basic_widget/textfield_example.dart';
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
         '/column': (context) => const ColumnExample(),
         '/row': (context) => const RowExample(),
         '/textField': (context) => const TextFieldExample(),
+        '/button': (context) => const ButtonExample(),
       },
     );
   }
