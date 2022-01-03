@@ -90,7 +90,7 @@ class _StackExampleState extends State<StackExample> {
             child: Column(
               children: [
                 const Text(
-                  "Main Axis Alignment",
+                  "Stack Alignment",
                   style: TextStyle(
                     fontSize: 16.0,
                   ),
