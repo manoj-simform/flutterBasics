@@ -24,7 +24,8 @@ class _ColumnExampleState extends State<ColumnExample> {
       itemExtent: 32.0,
       onSelectedItemChanged: (selectedIndex) {
         setState(() {
-          mainAxisSelected = mainAxisList.values.elementAt(selectedIndex);
+          mainAxisSelected =
+              mainAxisList.values.elementAt(selectedIndex);
         });
       },
       children: mainPickerItems,
@@ -37,7 +38,8 @@ class _ColumnExampleState extends State<ColumnExample> {
       itemExtent: 32.0,
       onSelectedItemChanged: (selectedIndex) {
         setState(() {
-          crossAxisSelected = crossAxisList.values.elementAt(selectedIndex);
+          crossAxisSelected =
+              crossAxisList.values.elementAt(selectedIndex);
         });
       },
       children: crossPickerItems,
@@ -130,7 +132,9 @@ class _ColumnExampleState extends State<ColumnExample> {
                 const SizedBox(
                   height: 5.0,
                 ),
-                Platform.isIOS ? mainIOSPicker() : androidMainDropdown(),
+                Platform.isIOS
+                    ? mainIOSPicker()
+                    : androidMainDropdown(),
               ],
             ),
           ),
@@ -148,7 +152,9 @@ class _ColumnExampleState extends State<ColumnExample> {
                 const SizedBox(
                   height: 5.0,
                 ),
-                Platform.isIOS ? crossIOSPicker() : androidCrossDropdown(),
+                Platform.isIOS
+                    ? crossIOSPicker()
+                    : androidCrossDropdown(),
               ],
             ),
           ),

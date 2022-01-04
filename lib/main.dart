@@ -49,7 +49,7 @@ class MyHomePage extends StatelessWidget {
           return Card(
             child: InkWell(
               onTap: () {
-                Navigator.pushNamed(context, '/${myDataList[index]}');
+                Navigator.pushNamed(context, "/${myDataList[index]}");
               },
               child: Container(
                 padding: const EdgeInsets.symmetric(
