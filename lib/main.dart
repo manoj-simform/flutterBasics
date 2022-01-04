@@ -7,6 +7,7 @@ import 'package:basic_widget/textfield_example.dart';
 import 'package:flutter/material.dart';
 
 import 'column_example.dart';
+import 'datafile_example.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
         '/button': (context) => const ButtonExample(),
         '/image': (context) => const ImageExample(),
         '/stack': (context) => const StackExample(),
+        '/data file': (context) => const DataFileExample(),
       },
     );
   }

@@ -34,8 +34,8 @@ class _StackExampleState extends State<StackExample> {
     List<DropdownMenuItem> dropdownItems = [];
     for (int i = 0; i < alignmentList.keys.length; i++) {
       var newItem = DropdownMenuItem(
-        child: mainAxisList.keys.elementAt(i),
-        value: mainAxisList.values.elementAt(i),
+        child: alignmentList.keys.elementAt(i),
+        value: alignmentList.values.elementAt(i),
       );
       dropdownItems.add(newItem);
     }
@@ -90,7 +90,7 @@ class _StackExampleState extends State<StackExample> {
             child: Column(
               children: [
                 const Text(
-                  "Main Axis Alignment",
+                  "Stack Alignment",
                   style: TextStyle(
                     fontSize: 16.0,
                   ),

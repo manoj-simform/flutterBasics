@@ -6,7 +6,8 @@ var myDataList = [
   'textField',
   'button',
   'image',
-  'stack'
+  'stack',
+  'data file'
 ];
 
 var mainAxisList = <Text, MainAxisAlignment>{
