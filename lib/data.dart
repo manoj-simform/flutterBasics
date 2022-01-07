@@ -7,8 +7,11 @@ var myDataList = [
   'button',
   'image',
   'stack',
-  'data file'
+  'data file',
+  'bottom navigation bar',
 ];
+
+var fruitList = List.generate(10, (index) => 'Fruit $index');
 
 var mainAxisList = <Text, MainAxisAlignment>{
   const Text('center'): MainAxisAlignment.center,

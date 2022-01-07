@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
@@ -33,7 +32,6 @@ class _DataFileExampleState extends State<DataFileExample> {
   Future<String> read() async {
     try {
       final file = await fileDoc;
-      log(file.path);
       String contents = await file.readAsString();
 
       return contents;

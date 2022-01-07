@@ -6,6 +6,7 @@ import 'package:basic_widget/stack_example.dart';
 import 'package:basic_widget/textfield_example.dart';
 import 'package:flutter/material.dart';
 
+import 'bottom_navigation_bar.dart';
 import 'column_example.dart';
 import 'datafile_example.dart';
 
@@ -30,6 +31,8 @@ class MyApp extends StatelessWidget {
         '/image': (context) => const ImageExample(),
         '/stack': (context) => const StackExample(),
         '/data file': (context) => const DataFileExample(),
+        '/bottom navigation bar': (context) =>
+            const BottomNavigationBarExample(),
       },
     );
   }
