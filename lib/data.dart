@@ -9,6 +9,7 @@ var myDataList = [
   'stack',
   'data file',
   'bottom navigation bar',
+  'tab bar',
 ];
 
 var fruitList = List.generate(10, (index) => 'Fruit $index');
