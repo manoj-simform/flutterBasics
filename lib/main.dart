@@ -1,3 +1,4 @@
+import 'package:basic_widget/bottomsheet_dialogs.dart';
 import 'package:basic_widget/button_example.dart';
 import 'package:basic_widget/data.dart';
 import 'package:basic_widget/image_example.dart';
@@ -35,6 +36,8 @@ class MyApp extends StatelessWidget {
         '/bottom navigation bar': (context) =>
             const BottomNavigationBarExample(),
         '/tab bar': (context) => const TabBarExample(),
+        '/bottomShit & diaLogs': (context) =>
+            const BottomSheetDialogExample(),
       },
     );
   }

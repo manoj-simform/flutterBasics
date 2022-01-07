@@ -10,6 +10,7 @@ var myDataList = [
   'data file',
   'bottom navigation bar',
   'tab bar',
+  'bottomShit & diaLogs',
 ];
 
 var fruitList = List.generate(10, (index) => 'Fruit $index');
