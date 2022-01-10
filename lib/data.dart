@@ -11,6 +11,7 @@ var myDataList = [
   'bottom navigation bar',
   'tab bar',
   'bottomShit & diaLogs',
+  'future builder',
 ];
 
 var fruitList = List.generate(100, (index) => 'Fruit $index');

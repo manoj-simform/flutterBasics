@@ -1,6 +1,7 @@
 import 'package:basic_widget/bottomsheet_dialogs.dart';
 import 'package:basic_widget/button_example.dart';
 import 'package:basic_widget/data.dart';
+import 'package:basic_widget/future_builder.dart';
 import 'package:basic_widget/image_example.dart';
 import 'package:basic_widget/row_example.dart';
 import 'package:basic_widget/stack_example.dart';
@@ -46,6 +47,7 @@ class MyApp extends StatelessWidget {
         '/tab bar': (context) => const TabBarExample(),
         '/bottomShit & diaLogs': (context) =>
             const BottomSheetDialogExample(),
+        '/future builder': (context) => const FutureBuilderExample(),
       },
     );
   }
