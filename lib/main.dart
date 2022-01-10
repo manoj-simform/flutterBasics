@@ -6,6 +6,7 @@ import 'package:basic_widget/image_example.dart';
 import 'package:basic_widget/layout_builder.dart';
 import 'package:basic_widget/row_example.dart';
 import 'package:basic_widget/stack_example.dart';
+import 'package:basic_widget/stream_builder.dart';
 import 'package:basic_widget/tab_bar_example.dart';
 import 'package:basic_widget/text_field_example.dart';
 import 'package:flutter/material.dart';
@@ -50,6 +51,7 @@ class MyApp extends StatelessWidget {
             const BottomSheetDialogExample(),
         '/future builder': (context) => const FutureBuilderExample(),
         '/layout builder': (context) => const LayoutBuilderExample(),
+        '/stream builder': (context) => const StreamBuilderExample(),
       },
     );
   }

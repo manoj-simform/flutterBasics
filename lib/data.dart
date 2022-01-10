@@ -13,6 +13,7 @@ var myDataList = [
   'bottomShit & diaLogs',
   'future builder',
   'layout builder',
+  'stream builder',
 ];
 
 var fruitList = List.generate(100, (index) => 'Fruit $index');
