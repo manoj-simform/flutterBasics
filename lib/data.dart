@@ -14,6 +14,8 @@ var myDataList = [
   'future builder',
   'layout builder',
   'stream builder',
+  'gridview',
+  'tableview',
 ];
 
 var fruitList = List.generate(100, (index) => 'Fruit $index');

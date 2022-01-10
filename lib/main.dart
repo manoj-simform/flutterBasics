@@ -2,12 +2,14 @@ import 'package:basic_widget/bottomsheet_dialogs.dart';
 import 'package:basic_widget/button_example.dart';
 import 'package:basic_widget/data.dart';
 import 'package:basic_widget/future_builder.dart';
+import 'package:basic_widget/gridview_example.dart';
 import 'package:basic_widget/image_example.dart';
 import 'package:basic_widget/layout_builder.dart';
 import 'package:basic_widget/row_example.dart';
 import 'package:basic_widget/stack_example.dart';
 import 'package:basic_widget/stream_builder.dart';
 import 'package:basic_widget/tab_bar_example.dart';
+import 'package:basic_widget/tableview_example.dart';
 import 'package:basic_widget/text_field_example.dart';
 import 'package:flutter/material.dart';
 
@@ -52,6 +54,8 @@ class MyApp extends StatelessWidget {
         '/future builder': (context) => const FutureBuilderExample(),
         '/layout builder': (context) => const LayoutBuilderExample(),
         '/stream builder': (context) => const StreamBuilderExample(),
+        '/gridview': (context) => const GridViewExample(),
+        '/tableview': (context) => const TableViewExample(),
       },
     );
   }
