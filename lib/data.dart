@@ -13,7 +13,7 @@ var myDataList = [
   'bottomShit & diaLogs',
 ];
 
-var fruitList = List.generate(10, (index) => 'Fruit $index');
+var fruitList = List.generate(100, (index) => 'Fruit $index');
 
 var mainAxisList = <Text, MainAxisAlignment>{
   const Text('center'): MainAxisAlignment.center,

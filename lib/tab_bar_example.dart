@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class TabBarExample extends StatefulWidget {
@@ -31,6 +32,7 @@ class _TabBarExampleState extends State<TabBarExample> {
           ),
         ),
         body: TabBarView(
+          dragStartBehavior: DragStartBehavior.down,
           children: [
             ListView.builder(
               itemBuilder: (context, index) {

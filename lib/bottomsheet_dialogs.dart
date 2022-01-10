@@ -10,7 +10,7 @@ class BottomSheetDialogExample extends StatefulWidget {
 
 class _BottomSheetDialogExampleState
     extends State<BottomSheetDialogExample> {
-  String? data;
+  late String data;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,14 +65,19 @@ class _BottomSheetDialogExampleState
                                   return AlertDialog(
                                     alignment: Alignment.center,
                                     title: Center(
-                                      child: Text(data!),
+                                      child: Text(data),
                                     ),
                                     actions: [
-                                      TextButton(
+                                      ElevatedButton(
                                         onPressed: () {
                                           Navigator.pop(context);
                                         },
-                                        child: const Text('Close'),
+                                        child: Text(
+                                          'Close',
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .headline1,
+                                        ),
                                       ),
                                     ],
                                   );
@@ -100,6 +105,7 @@ class _BottomSheetDialogExampleState
           ),
           onPressed: () {
             showDialog(
+              barrierDismissible: false,
               builder: (BuildContext context) {
                 return const SimpleDialog(
                   title: Text(

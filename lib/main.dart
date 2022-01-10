@@ -23,6 +23,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        textTheme: const TextTheme(
+          headline1: TextStyle(
+            color: Colors.deepOrange,
+            fontSize: 18.0,
+          ),
+        ),
+      ),
       initialRoute: '/',
       routes: {
         '/': (context) => const MyHomePage(),
