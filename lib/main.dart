@@ -3,6 +3,7 @@ import 'package:basic_widget/button_example.dart';
 import 'package:basic_widget/data.dart';
 import 'package:basic_widget/future_builder.dart';
 import 'package:basic_widget/image_example.dart';
+import 'package:basic_widget/layout_builder.dart';
 import 'package:basic_widget/row_example.dart';
 import 'package:basic_widget/stack_example.dart';
 import 'package:basic_widget/tab_bar_example.dart';
@@ -48,6 +49,7 @@ class MyApp extends StatelessWidget {
         '/bottomShit & diaLogs': (context) =>
             const BottomSheetDialogExample(),
         '/future builder': (context) => const FutureBuilderExample(),
+        '/layout builder': (context) => const LayoutBuilderExample(),
       },
     );
   }
