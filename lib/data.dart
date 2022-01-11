@@ -16,7 +16,8 @@ var myDataList = [
   'stream builder',
   'gridview',
   'tableview',
-  'pageView'
+  'pageView',
+  'custom scrollview',
 ];
 
 var fruitList = List.generate(100, (index) => 'Fruit $index');

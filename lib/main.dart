@@ -1,5 +1,6 @@
 import 'package:basic_widget/bottomsheet_dialogs.dart';
 import 'package:basic_widget/button_example.dart';
+import 'package:basic_widget/custome_scrollview.dart';
 import 'package:basic_widget/data.dart';
 import 'package:basic_widget/future_builder.dart';
 import 'package:basic_widget/gridview_example.dart';
@@ -58,6 +59,8 @@ class MyApp extends StatelessWidget {
         '/gridview': (context) => const GridViewExample(),
         '/tableview': (context) => const TableViewExample(),
         '/pageView': (context) => const PageViewExample(),
+        '/custom scrollview': (context) =>
+            const CustomScrollViewExample(),
       },
     );
   }
