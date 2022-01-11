@@ -11,26 +11,16 @@ class StreamBuilderExample extends StatefulWidget {
 }
 
 class _StreamBuilderExampleState extends State<StreamBuilderExample> {
-  bool isPaused = false;
-  int value = 1;
+  int value = 0;
 
-  late StreamController<int> streamController;
+  StreamController<int> streamController = StreamController();
   late StreamSubscription<int> streamSubscription;
 
   Stream<int> count() {
     return Stream.periodic(
       const Duration(seconds: 1),
-      (_) => value++,
+      (_) => ++value,
     );
-  }
-
-  @override
-  void initState() {
-    super.initState();
-    streamController = StreamController();
-    streamSubscription = count().listen((event) {
-      streamController.add(event);
-    });
   }
 
   @override
@@ -77,16 +67,30 @@ class _StreamBuilderExampleState extends State<StreamBuilderExample> {
           ),
           TextButton(
             onPressed: () {
-              setState(() {
-                isPaused = !isPaused;
+              streamSubscription = count().listen((event) {
+                streamController.add(event);
+                streamController.onPause!();
               });
-              if (isPaused) {
-                streamSubscription.pause();
-              } else {
-                streamSubscription.resume();
-              }
             },
-            child: Text(isPaused ? 'Resume' : 'Pause'),
+            child: const Text('Listen'),
+          ),
+          TextButton(
+            onPressed: () {
+              streamSubscription.pause();
+            },
+            child: const Text('Pause'),
+          ),
+          TextButton(
+            onPressed: () {
+              streamSubscription.resume();
+            },
+            child: const Text('Resume'),
+          ),
+          TextButton(
+            onPressed: () {
+              streamSubscription.cancel();
+            },
+            child: const Text('Cancel'),
           ),
         ],
       ),

@@ -5,6 +5,7 @@ import 'package:basic_widget/future_builder.dart';
 import 'package:basic_widget/gridview_example.dart';
 import 'package:basic_widget/image_example.dart';
 import 'package:basic_widget/layout_builder.dart';
+import 'package:basic_widget/pageview_example.dart';
 import 'package:basic_widget/row_example.dart';
 import 'package:basic_widget/stack_example.dart';
 import 'package:basic_widget/stream_builder.dart';
@@ -56,6 +57,7 @@ class MyApp extends StatelessWidget {
         '/stream builder': (context) => const StreamBuilderExample(),
         '/gridview': (context) => const GridViewExample(),
         '/tableview': (context) => const TableViewExample(),
+        '/pageView': (context) => const PageViewExample(),
       },
     );
   }
