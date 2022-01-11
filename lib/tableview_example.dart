@@ -12,32 +12,77 @@ class TableViewExample extends StatelessWidget {
       body: Table(
         textDirection: TextDirection.rtl,
         defaultVerticalAlignment: TableCellVerticalAlignment.middle,
-        border: TableBorder.all(width: 2.0, color: Colors.black),
-        children: const [
-          TableRow(children: [
-            Text(
-              "Education",
-              textScaleFactor: 1.5,
-            ),
-            Text("Institution name", textScaleFactor: 1.5),
-            Text("University", textScaleFactor: 1.5),
-          ]),
-          TableRow(children: [
-            Text("B.Tech", textScaleFactor: 1.5),
-            Text("Depstar", textScaleFactor: 1.5),
-            Text("Charusat", textScaleFactor: 1.5),
-          ]),
-          TableRow(children: [
-            Text("Diploma in CE", textScaleFactor: 1.5),
-            Text("Om Institute", textScaleFactor: 1.5),
-            Text("GTU", textScaleFactor: 1.5),
-          ]),
-          TableRow(children: [
-            Text("High School", textScaleFactor: 1.5),
-            Text("Vivekananda Vidhyalay", textScaleFactor: 1.5),
-            Text("GSEB", textScaleFactor: 1.5),
-          ]),
+        defaultColumnWidth: const FlexColumnWidth(1.0),
+        border: TableBorder.all(
+          width: 2.0,
+          color: Colors.blue,
+          style: BorderStyle.solid,
+        ),
+        children: [
+          TableRow(
+            children: [
+              customText(
+                text: "Education",
+              ),
+              customText(
+                text: "Institution name",
+              ),
+              customText(
+                text: "University",
+              ),
+            ],
+          ),
+          TableRow(
+            children: [
+              customText(
+                text: "B.Tech",
+              ),
+              customText(
+                text: "Depstar",
+              ),
+              customText(
+                text: "Charusat",
+              ),
+            ],
+          ),
+          TableRow(
+            children: [
+              customText(
+                text: "Diploma in CE",
+              ),
+              customText(
+                text: "Om Institute",
+              ),
+              customText(
+                text: "GTU",
+              ),
+            ],
+          ),
+          TableRow(
+            children: [
+              customText(
+                text: "High School",
+              ),
+              customText(
+                text: "Vivekananda Vidhyalay",
+              ),
+              customText(
+                text: "GSEB",
+              ),
+            ],
+          ),
         ],
+      ),
+    );
+  }
+
+  customText({required String text}) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Text(
+        text,
+        textScaleFactor: 1.5,
+        textAlign: TextAlign.center,
       ),
     );
   }

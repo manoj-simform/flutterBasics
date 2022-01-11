@@ -11,23 +11,29 @@ class GridViewExample extends StatelessWidget {
       appBar: AppBar(
         title: const Text('GridView Example'),
       ),
-      body: GridView.builder(
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 4,
-        ),
-        itemBuilder: (context, index) {
-          return Container(
-            margin: const EdgeInsets.all(10.0),
-            color:
-                Color((math.Random().nextDouble() * 0xFFFFFF).toInt())
-                    .withOpacity(1.0),
-          );
-        },
-        addAutomaticKeepAlives: false,
-        physics: const BouncingScrollPhysics(),
-        scrollDirection: Axis.horizontal,
-        itemCount: 100,
-        cacheExtent: 10,
+      body: Column(
+        children: [
+          SizedBox(
+            height: MediaQuery.of(context).size.height * .8,
+            child: GridView.builder(
+              gridDelegate:
+                  const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 4,
+              ),
+              itemBuilder: (context, index) {
+                return Container(
+                  margin: const EdgeInsets.all(10.0),
+                  color: Color((math.Random().nextDouble() * 0xFFFFFF)
+                          .toInt())
+                      .withOpacity(1.0),
+                );
+              },
+              addAutomaticKeepAlives: false,
+              physics: const BouncingScrollPhysics(),
+              itemCount: 100,
+            ),
+          ),
+        ],
       ),
     );
   }
