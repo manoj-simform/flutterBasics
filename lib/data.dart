@@ -18,6 +18,7 @@ var myDataList = [
   'tableview',
   'pageView',
   'custom scrollview',
+  'helper widget',
 ];
 
 var fruitList = List.generate(100, (index) => 'Fruit $index');
