@@ -14,6 +14,7 @@ import 'package:basic_widget/stream_builder.dart';
 import 'package:basic_widget/tab_bar_example.dart';
 import 'package:basic_widget/tableview_example.dart';
 import 'package:basic_widget/text_field_example.dart';
+import 'package:basic_widget/widget_customisation_example.dart';
 import 'package:flutter/material.dart';
 
 import 'bottom_navigation_bar.dart';
@@ -63,6 +64,8 @@ class MyApp extends StatelessWidget {
         '/custom scrollview': (context) =>
             const CustomScrollViewExample(),
         '/helper widget': (context) => const HelperWidgetExample(),
+        '/widget customisation': (context) =>
+            const WidgetCustomisationExample(),
       },
     );
   }
