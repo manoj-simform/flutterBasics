@@ -8,6 +8,7 @@ import 'package:basic_widget/helper_widget_example.dart';
 import 'package:basic_widget/image_example.dart';
 import 'package:basic_widget/layout_builder.dart';
 import 'package:basic_widget/pageview_example.dart';
+import 'package:basic_widget/route%20transition/route_transition_example.dart';
 import 'package:basic_widget/row_example.dart';
 import 'package:basic_widget/stack_example.dart';
 import 'package:basic_widget/stream_builder.dart';
@@ -66,6 +67,8 @@ class MyApp extends StatelessWidget {
         '/helper widget': (context) => const HelperWidgetExample(),
         '/widget customisation': (context) =>
             const WidgetCustomisationExample(),
+        '/route transition': (context) =>
+            const RouteTransitionExample(),
       },
     );
   }

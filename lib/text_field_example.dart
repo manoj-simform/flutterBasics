@@ -16,7 +16,8 @@ class _TextFieldExampleState extends State<TextFieldExample> {
         title: const Text('TextField Example'),
       ),
       body: ListView(
-        padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 10.0),
+        padding: const EdgeInsets.symmetric(
+            horizontal: 30.0, vertical: 10.0),
         children: [
           CustomTextField(
             onChange: (text) {
@@ -32,7 +33,8 @@ class _TextFieldExampleState extends State<TextFieldExample> {
                 borderRadius: BorderRadius.all(Radius.circular(25.0)),
               ),
               focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.blue, width: 2.0),
+                borderSide:
+                    BorderSide(color: Colors.blue, width: 2.0),
                 borderRadius: BorderRadius.all(Radius.circular(25.0)),
               ),
               labelText: "Secret",
@@ -104,12 +106,12 @@ class _TextFieldExampleState extends State<TextFieldExample> {
 
 class CustomTextField extends StatelessWidget {
   final Function(String) onChange;
-  bool obscureText;
-  bool autoFocus;
-  TextInputType keyboardType;
-  InputDecoration? inputDecoration;
-  int maxLine;
-  CustomTextField(
+  final bool obscureText;
+  final bool autoFocus;
+  final TextInputType keyboardType;
+  final InputDecoration? inputDecoration;
+  final int maxLine;
+  const CustomTextField(
       {Key? key,
       required this.onChange,
       this.obscureText = false,
