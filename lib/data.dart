@@ -21,6 +21,8 @@ var myDataList = [
   'helper widget',
   'widget customisation',
   'route transition',
+  'hero widget',
+  'extension',
 ];
 
 var fruitList = List.generate(100, (index) => 'Fruit $index');
