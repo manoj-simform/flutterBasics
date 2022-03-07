@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class ImageExample extends StatelessWidget {
@@ -11,6 +12,18 @@ class ImageExample extends StatelessWidget {
       ),
       body: ListView(
         children: [
+          Center(
+            child: CachedNetworkImage(
+              imageUrl: "http://via.placeholder.com/200x150",
+              imageBuilder: (context, imageProvider) => Image(
+                image: imageProvider,
+              ),
+              placeholder: (context, url) =>
+                  const CircularProgressIndicator(),
+              errorWidget: (context, url, error) =>
+                  const Icon(Icons.error),
+            ),
+          ),
           const Image(
             image: AssetImage('assets/image-1.jpg'),
           ),

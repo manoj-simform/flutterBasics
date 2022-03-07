@@ -1,3 +1,4 @@
+import 'package:basic_widget/animations/animation_screen.dart';
 import 'package:basic_widget/bottom_navigation_bar.dart';
 import 'package:basic_widget/bottom_sheet_dialogs.dart';
 import 'package:basic_widget/button_example.dart';
@@ -51,6 +52,7 @@ var myDataList = [
   'hero widget',
   'extension',
   'state management',
+  'animation',
 ];
 
 Map<String, Widget Function(BuildContext)> routes(
@@ -86,6 +88,7 @@ Map<String, Widget Function(BuildContext)> routes(
     '/state management': (context) => const StateManagementExample(),
     '/globalState': (context) => const GlobalStateManagement(),
     '/providerStateManagement': (context) => const ProviderModel(),
+    '/animation': (context) => const AnimationScreen(),
   };
 }
 
