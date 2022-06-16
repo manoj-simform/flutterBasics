@@ -13,6 +13,7 @@ import 'package:basic_widget/hero/hero_example.dart';
 import 'package:basic_widget/image_example.dart';
 import 'package:basic_widget/layout_builder.dart';
 import 'package:basic_widget/page_view_example.dart';
+import 'package:basic_widget/photo_filter.dart';
 import 'package:basic_widget/route%20transition/route_transition_example.dart';
 import 'package:basic_widget/row_example.dart';
 import 'package:basic_widget/stack_example.dart';
@@ -53,10 +54,10 @@ var myDataList = [
   'extension',
   'state management',
   'animation',
+  'photo filter'
 ];
 
-Map<String, Widget Function(BuildContext)> routes(
-    BuildContext context) {
+Map<String, Widget Function(BuildContext)> routes(BuildContext context) {
   return {
     '/': (context) => const MyHomePage(),
     '/column': (context) => const ColumnExample(),
@@ -66,22 +67,18 @@ Map<String, Widget Function(BuildContext)> routes(
     '/image': (context) => const ImageExample(),
     '/stack': (context) => const StackExample(),
     '/data file': (context) => const DataFileExample(),
-    '/bottom navigation bar': (context) =>
-        const BottomNavigationBarExample(),
+    '/bottom navigation bar': (context) => const BottomNavigationBarExample(),
     '/tab bar': (context) => const TabBarExample(),
-    '/bottomShit & diaLogs': (context) =>
-        const BottomSheetDialogExample(),
+    '/bottomShit & diaLogs': (context) => const BottomSheetDialogExample(),
     '/future builder': (context) => const FutureBuilderExample(),
     '/layout builder': (context) => const LayoutBuilderExample(),
     '/stream builder': (context) => const StreamBuilderExample(),
     '/gridview': (context) => const GridViewExample(),
     '/tableview': (context) => const TableViewExample(),
     '/pageView': (context) => const PageViewExample(),
-    '/custom scrollview': (context) =>
-        const CustomScrollViewExample(),
+    '/custom scrollview': (context) => const CustomScrollViewExample(),
     '/helper widget': (context) => const HelperWidgetExample(),
-    '/widget customisation': (context) =>
-        const WidgetCustomisationExample(),
+    '/widget customisation': (context) => const WidgetCustomisationExample(),
     '/route transition': (context) => const RouteTransitionExample(),
     '/hero widget': (context) => HeroExample(),
     '/extension': (context) => const ExtensionExample(),
@@ -89,6 +86,7 @@ Map<String, Widget Function(BuildContext)> routes(
     '/globalState': (context) => const GlobalStateManagement(),
     '/providerStateManagement': (context) => const ProviderModel(),
     '/animation': (context) => const AnimationScreen(),
+    '/photo filter': (context) => const PhotoFilterExample(),
   };
 }
 
