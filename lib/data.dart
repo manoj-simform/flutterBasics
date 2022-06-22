@@ -10,6 +10,7 @@ import 'package:basic_widget/future_builder.dart';
 import 'package:basic_widget/gridview_example.dart';
 import 'package:basic_widget/helper_widget_example.dart';
 import 'package:basic_widget/hero/hero_example.dart';
+import 'package:basic_widget/image%20manipulation/image_manipulation.dart';
 import 'package:basic_widget/image_example.dart';
 import 'package:basic_widget/layout_builder.dart';
 import 'package:basic_widget/page_view_example.dart';
@@ -54,7 +55,8 @@ var myDataList = [
   'extension',
   'state management',
   'animation',
-  'photo filter'
+  'photo filter',
+  'image manipulation',
 ];
 
 Map<String, Widget Function(BuildContext)> routes(BuildContext context) {
@@ -87,6 +89,7 @@ Map<String, Widget Function(BuildContext)> routes(BuildContext context) {
     '/providerStateManagement': (context) => const ProviderModel(),
     '/animation': (context) => const AnimationScreen(),
     '/photo filter': (context) => const PhotoFilterExample(),
+    '/image manipulation': (context) => const ImageManipulation(),
   };
 }
 
